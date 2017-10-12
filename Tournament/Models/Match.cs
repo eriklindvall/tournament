@@ -7,6 +7,14 @@ using System.Web;
 
 namespace Tournament.Models
 {
+    public enum MatchState
+    {
+        NotPlayed,
+        Regulation,
+        Overtime,
+        Penalties
+    }
+
     public class Match
     {
         public int Id { get; set; }
@@ -17,9 +25,16 @@ namespace Tournament.Models
         [ForeignKey("AwayTeamId")]
         public Team AwayTeam { get; set; }
         public DateTime KickoffTime { get; set; }
-        public int GroupId { get; set; }
+        public int? GroupId { get; set; }
         [JsonIgnore]
         public Group Group { get; set; }
         public int Round { get; set; }
+        public int HomeScore { get; set; }
+        public int AwayScore { get; set; }
+        public int HomeOvertimeScore { get; set; }
+        public int AwayOvertimeScore { get; set; }
+        public int HomePenaltyScore { get; set; }
+        public int AwayPenaltyScore { get; set; }
+        public MatchState MatchState { get; set; }
     }
 }

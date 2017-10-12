@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Data.Entity;
 using Tournament.Models;
 
 namespace Tournament.Controllers
@@ -13,15 +14,18 @@ namespace Tournament.Controllers
         
         public IEnumerable<Match> Get()
         {
-            return _dbContext.Matches;
+            return _dbContext
+                .Matches
+                .Include(m => m.HomeTeam)
+                .Include(m => m.AwayTeam);
         }
 
         public Match Get(int id)
         {
             return _dbContext
                 .Matches
-                .Include("HomeTeam")
-                .Include("AwayTeam")
+                .Include(m => m.HomeTeam)
+                .Include(m => m.AwayTeam)
                 .SingleOrDefault(m => m.Id == id);
         }
 

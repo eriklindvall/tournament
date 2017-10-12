@@ -9,7 +9,6 @@ namespace Tournament.Models
         public DbSet<Team> Teams { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Group> Groups { get; set; }
-        public DbSet<MatchResult> MatchResults { get; set; }
 
     }
 }

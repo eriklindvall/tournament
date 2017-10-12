@@ -160,12 +160,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Demo\DemoInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Match.cs" />
-    <Compile Include="Models\MatchResult.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\TournamentDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

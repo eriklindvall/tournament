@@ -3,3 +3,5 @@ packages/*
 */obj/*
 */bin/*
 *.user
+/Tournament/App_Data/Tournament.mdf
+/Tournament/App_Data/Tournament_log.ldf
