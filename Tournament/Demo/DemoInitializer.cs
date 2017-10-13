@@ -32,12 +32,12 @@ namespace Tournament.Demo
 
         private IEnumerable<Match> _matches = new Match[]
         {
-            new Match() { Id = 1, HomeTeamId = 1, AwayTeamId = 2, KickoffTime = DateTime.Now, MatchState = MatchState.NotPlayed, GroupId = 1 },
-            new Match() { Id = 2, HomeTeamId = 3, AwayTeamId = 4, KickoffTime = DateTime.Now, MatchState = MatchState.NotPlayed, GroupId = 1 },
-            new Match() { Id = 3, HomeTeamId = 1, AwayTeamId = 3, KickoffTime = DateTime.Now.AddDays(1), MatchState = MatchState.NotPlayed, GroupId = 1 },
-            new Match() { Id = 4, HomeTeamId = 2, AwayTeamId = 4, KickoffTime = DateTime.Now.AddDays(1), MatchState = MatchState.NotPlayed, GroupId = 1 },
-            new Match() { Id = 5, HomeTeamId = 4, AwayTeamId = 1, KickoffTime = DateTime.Now.AddDays(2), MatchState = MatchState.NotPlayed, GroupId = 1 },
-            new Match() { Id = 6, HomeTeamId = 3, AwayTeamId = 2, KickoffTime = DateTime.Now.AddDays(2), MatchState = MatchState.NotPlayed, GroupId = 1 }
+            new Match() { Id = 1, HomeTeamId = 1, AwayTeamId = 2, KickoffTime = DateTime.Now, GroupId = 1 },
+            new Match() { Id = 2, HomeTeamId = 3, AwayTeamId = 4, KickoffTime = DateTime.Now, GroupId = 1 },
+            new Match() { Id = 3, HomeTeamId = 1, AwayTeamId = 3, KickoffTime = DateTime.Now.AddDays(1), GroupId = 1 },
+            new Match() { Id = 4, HomeTeamId = 2, AwayTeamId = 4, KickoffTime = DateTime.Now.AddDays(1), GroupId = 1 },
+            new Match() { Id = 5, HomeTeamId = 4, AwayTeamId = 1, KickoffTime = DateTime.Now.AddDays(2), GroupId = 1 },
+            new Match() { Id = 6, HomeTeamId = 3, AwayTeamId = 2, KickoffTime = DateTime.Now.AddDays(2), GroupId = 1 }
         };
     }
 }

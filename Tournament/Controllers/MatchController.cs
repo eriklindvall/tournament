@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Data.Entity;
 using Tournament.Models;
+using Tournament.Models.ViewModels;
 
 namespace Tournament.Controllers
 {
@@ -32,6 +33,28 @@ namespace Tournament.Controllers
         public Match Post([FromBody]Match match)
         {
             _dbContext.Matches.Add(match);
+            _dbContext.SaveChanges();
+            return match;
+        }
+
+        [HttpPut]
+        [Route("api/match/result/{id}")]
+        public Match Result(int id, [FromBody]MatchResult matchResult)
+        {
+            var match = _dbContext.Matches.Find(id);
+            match.HomeScore = matchResult.HomeScore;
+            match.AwayScore = matchResult.AwayScore;
+            if (matchResult.HomeOvertimeScore != null && matchResult.AwayOvertimeScore != null)
+            {
+                match.HomeOvertimeScore = matchResult.HomeOvertimeScore;
+                match.AwayOvertimeScore = matchResult.AwayOvertimeScore;
+            }
+            if (matchResult.HomePenaltyScore != null && matchResult.AwayPenaltyScore != null)
+            {
+                match.HomePenaltyScore = matchResult.HomePenaltyScore;
+                match.AwayPenaltyScore = matchResult.AwayPenaltyScore;
+            }
+            match.IsPlayed = true;
             _dbContext.SaveChanges();
             return match;
         }

@@ -7,13 +7,6 @@ using System.Web;
 
 namespace Tournament.Models
 {
-    public enum MatchState
-    {
-        NotPlayed,
-        Regulation,
-        Overtime,
-        Penalties
-    }
 
     public class Match
     {
@@ -31,10 +24,10 @@ namespace Tournament.Models
         public int Round { get; set; }
         public int HomeScore { get; set; }
         public int AwayScore { get; set; }
-        public int HomeOvertimeScore { get; set; }
-        public int AwayOvertimeScore { get; set; }
-        public int HomePenaltyScore { get; set; }
-        public int AwayPenaltyScore { get; set; }
-        public MatchState MatchState { get; set; }
+        public int? HomeOvertimeScore { get; set; }
+        public int? AwayOvertimeScore { get; set; }
+        public int? HomePenaltyScore { get; set; }
+        public int? AwayPenaltyScore { get; set; }
+        public bool IsPlayed { get; set; }
     }
 }
