@@ -171,6 +171,7 @@
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\TournamentDbContext.cs" />
     <Compile Include="Models\ViewModels\GroupTable.cs" />
+    <Compile Include="Models\ViewModels\MatchResult.cs" />
     <Compile Include="Models\ViewModels\TableRow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
