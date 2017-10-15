@@ -5,3 +5,4 @@ packages/*
 *.user
 /Tournament/App_Data/Tournament.mdf
 /Tournament/App_Data/Tournament_log.ldf
+/frontend/tournament/node_modules/*
