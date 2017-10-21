@@ -15,3 +15,39 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#header nav {
+    background-color: #00BFFF;
+    color: white;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+}
+#header nav a {
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+}
+    #header nav a:hover {
+        color: #00BFFF;
+        background-color: white;
+        text-decoration: none;
+    }
+    #header nav a.active {
+        background-color: #1E90FF
+}
+.group-card {
+    float: left;​
+    margin: 20px;
+    padding: 20px;
+    }
+
+    .group-card ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 0 10px;
+    }
+    .group-card h5 {
+        margin: 10px;   
+    }
+ 
