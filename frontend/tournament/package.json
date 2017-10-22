@@ -8,6 +8,11 @@
     "react-router": "^4.2.0",
     "react-scripts": "1.0.14"
   },
+  "proxy": {
+    "/api" : {
+      "target" : "http://localhost:52061"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
