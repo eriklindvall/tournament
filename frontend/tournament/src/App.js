@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Menu from './features/menu/menu.js'
+import Menu from './components/menu/menu.js'
+import Results from './containers/results.js'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React Erik</h1>
         </header>
         <Menu />
+        <Results />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
