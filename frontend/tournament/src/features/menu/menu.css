@@ -1,22 +1,23 @@
 .Menu nav {
-    background-color: #00BFFF;
-    color: white;
+    background-color: white;
+    color: #4682B4;
     margin: 0;
     padding: 10px 0px 10px 0px;
 }
 .Menu nav a {
-    color: white;
+    color: #4682B4;
     margin: 0;
     padding: 10px;
     text-decoration: none;
 }
-
+.Menu nav a.active {
+        color: #2F4F4F;
+}
 .Menu nav a:hover {
-        color: #00BFFF;
-        background-color: white;
+        color: white;
+        background-color: #4682B4;
         text-decoration: none;
 }
-
-.Menu nav a.active {
-        background-color: #1E90FF
+.Menu hr {
+  border-color: #4682B4;
 }
