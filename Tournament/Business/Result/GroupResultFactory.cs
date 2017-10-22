@@ -7,14 +7,14 @@ using Tournament.Models.ViewModels;
 
 namespace Tournament.Business.Result
 {
-    public class GroupTableFactory
+    public class GroupResultFactory
     {
-        public GroupTable GetTable(List<Team> teams, List<Match> matches)
+        public GroupResult GetResult(string groupName, List<Team> teams, List<Match> matches)
         {
-            var table = new GroupTable() { TableRows = new List<TableRow>() };
-            table.TableRows.AddRange(teams.Select(team => CreateTableRow(team, matches)));
-            table.TableRows.Sort(new TablerowComparison(matches).CompareTableRows);
-            return table;
+            var result = new GroupResult() { GroupName = groupName, Table = new List<TableRow>(), Matches = matches };
+            result.Table.AddRange(teams.Select(team => CreateTableRow(team, matches.Where(match => match.IsPlayed).ToList())));
+            result.Table.Sort(new TablerowComparison(matches).CompareTableRows);
+            return result;
         }
 
         private TableRow CreateTableRow(Team team, List<Match> matches)

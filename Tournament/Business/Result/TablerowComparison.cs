@@ -38,7 +38,8 @@ namespace Tournament.Business.Result
             }
 
             //meeting
-            var match = _matches.SingleOrDefault(m => (m.HomeTeamId == row1.Team.Id || m.AwayTeamId == row1.Team.Id) &&
+            var match = _matches.SingleOrDefault(m => m.IsPlayed && 
+                                             (m.HomeTeamId == row1.Team.Id || m.AwayTeamId == row1.Team.Id) &&
                                              (m.HomeTeamId == row2.Team.Id || m.AwayTeamId == row2.Team.Id));
             if (match == null)
             {

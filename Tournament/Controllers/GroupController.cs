@@ -36,11 +36,11 @@ namespace Tournament.Controllers
 
         [HttpGet]
         [Route("api/group/result")]
-        public IEnumerable<GroupTable> GetGroupTables()
+        public IEnumerable<GroupResult> GetGroupTables()
         {
             var groups = _dbContext.Groups.Include(group => group.Matches).Include(group => group.Teams).ToList();
-            var factory = new GroupTableFactory();
-            return groups.Select(group => factory.GetTable(group.Teams.ToList(), group.Matches.Where(match => match.IsPlayed).ToList()));
+            var factory = new GroupResultFactory();
+            return groups.Select(group => factory.GetResult(group.Name, group.Teams.ToList(), group.Matches.ToList()));
         }
     }
 }
