@@ -9,8 +9,8 @@ class Menu extends Component {
           <a href="/" className="active">Tournament results</a>
           <a href="/">My bets</a>
           <a href="/">Ranking</a>
+          <a href="/">Participants</a>
           <a href="/">Admin</a>
-          <a href="/">Setup</a>
         </nav>
         <hr />
       </div>
