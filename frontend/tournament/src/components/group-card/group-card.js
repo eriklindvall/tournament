@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TableRow from './table-row.js';
 import Match from './match.js';
+import './group-card.css';
 
 class GroupCard extends Component {
   render() {
@@ -29,10 +30,6 @@ class GroupCard extends Component {
             awayScore={match.AwayScore}
             kickoffTime={match.KickoffTime}/>)}
         </ul>
-
-
-
-        <hr />
       </div>
     );
   }
