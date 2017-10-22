@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GroupCard from '../components/group-card/group-card.js'
 
 class Results extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Results extends Component {
 
   render() {
     const groups = this.state.tables.map(group =>
-    <div></div>);
+    <GroupCard name={group.GroupName} table={group.Table} matches={group.Matches} />);
     return (
       <div className="Results">
         {groups}
