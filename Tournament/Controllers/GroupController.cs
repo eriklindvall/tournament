@@ -40,7 +40,7 @@ namespace Tournament.Controllers
         {
             var groups = _dbContext.Groups.Include(group => group.Matches).Include(group => group.Teams).ToList();
             var factory = new GroupResultFactory();
-            return groups.Select(group => factory.GetResult(group.Name, group.Teams.ToList(), group.Matches.ToList()));
+            return groups.Select(group => factory.GetResult(group.Name, group.Teams.ToList(), group.Matches.OrderBy(match => match.KickoffTime).ToList()));
         }
     }
 }
